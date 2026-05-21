@@ -1,37 +1,41 @@
-# Practical lesson pz-UML
-## Побудова повердінкових UML-діаграм для проєктування інформаційних систем
+# pz-UML
 
+## Система: Онлайн-магазин
 
-> У цьому занятті студенти отримують практичні навички моделювання інформаційних систем за допомогою UML.
-> Мета — навчитися аналізувати вимоги до системи та візуалізувати її структуру й поведінку за допомогою поведінкових UML-діаграм.
+---
 
-## What need to do:
+## Use Case
 
-* Обрати предметну область або просту інформаційну систему для моделювання
-* Побудувати діаграму варіантів використання (Use Case Diagram)
-* Побудувати діаграму послідовності (Sequence Diagram)
-* Побудувати діаграму діяльності (Activity Diagram)
-* Використати будь-який інструмент UML-моделювання (draw.io, Miro, lucidchart, Mermaidjs тощо)
+```mermaid
+graph TD
+    User -->|Купити товар| System
+    Admin -->|Керувати товарами| System
+```
 
-## Acceptance criteria
+---
 
-- Побудовано всі три UML-діаграми:
-    - Use Case Diagram
-    - Sequence Diagram
-    - Activity Diagram
-- Діаграми логічно пов’язані між собою та відповідають обраній предметній області
-- Коректно використані основні UML-нотації та позначення
-- Здобувач розуміє призначення кожної діаграми та може пояснити її зміст
-- Усі діаграми збережені у вигляді зображень або файлів проєкту або варіант markdown + mermaidjs
-- Опис роботи та діаграми оформлені в markdown
-- Надати посилання на виконанні діаграми в projectPlan
+## Sequence
 
-## Usfull links
+```mermaid
+sequenceDiagram
+    User->>System: Обрати товар
+    System-->>User: Показати товар
+    User->>System: Купити
+```
 
-[Як будувати UML-діаграми. Розбираємо три найпопулярніші варіанти](https://dou.ua/forums/topic/40575/)
+---
 
-[The ultimate guide to UML diagrams](https://miro.com/diagramming/what-is-a-uml-diagram/)
+## Activity
 
-[Master the basics of Lucidchart in 3 minutes](https://www.lucidchart.com/pages/tutorial/uml-use-case-diagram#section_4)
+```mermaid
+flowchart TD
+    A[Початок] --> B[Вибір товару]
+    B --> C[Покупка]
+    C --> D[Кінець]
+```
 
-[Mermaidjs](https://mermaid.js.org/)
+---
+
+## Посилання
+
+Встав тут посилання на draw.io (необов'язково)
